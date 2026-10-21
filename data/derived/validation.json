@@ -1,0 +1,158 @@
+{
+  "deconvolution": {
+    "max_abs_error_known_mixture": 1.2212453270876722e-15,
+    "pearson_vs_skimage": {
+      "haematoxylin": 0.9999888654050184,
+      "eosin": 0.9941622794641908,
+      "dab": 0.9999980916660385
+    },
+    "stain_vector_angle_deg": {
+      "haematoxylin": 1.3598102986724891,
+      "eosin": 1.7464886552666625
+    }
+  },
+  "development_fields": {
+    "f1": {
+      "mean": 0.9792782852689536,
+      "ci_low": 0.9772727272727272,
+      "ci_high": 0.9803921568627451
+    },
+    "precision": {
+      "mean": 0.9962335216572504,
+      "ci_low": 0.9887005649717514,
+      "ci_high": 1.0
+    },
+    "recall": {
+      "mean": 0.9629629629629629,
+      "ci_low": 0.9555555555555556,
+      "ci_high": 0.9722222222222222
+    },
+    "count_error_pct": {
+      "mean": -3.3333333333333335,
+      "ci_low": -4.444444444444445,
+      "ci_high": -1.6666666666666667
+    }
+  },
+  "test_fields": {
+    "f1": {
+      "mean": 0.9744734401707685,
+      "ci_low": 0.9705514712900625,
+      "ci_high": 0.9787449203305636
+    },
+    "precision": {
+      "mean": 0.9942687232274348,
+      "ci_low": 0.9904867641936607,
+      "ci_high": 0.9980785194274872
+    },
+    "recall": {
+      "mean": 0.9555555555555556,
+      "ci_low": 0.9462962962962963,
+      "ci_high": 0.9648148148148148
+    },
+    "count_error_pct": {
+      "mean": -3.888888888888889,
+      "ci_low": -5.092592592592593,
+      "ci_high": -2.777777777777778
+    }
+  },
+  "n_development_fields": 3,
+  "n_test_fields": 6,
+  "fixed_threshold": 0.40138916475301184,
+  "blank_slide_counts": [
+    0,
+    0,
+    0
+  ],
+  "per_test_field": [
+    {
+      "tp": 172,
+      "fp": 2,
+      "fn": 8,
+      "precision": 0.9885057471264368,
+      "recall": 0.9555555555555556,
+      "f1": 0.9717514124293786,
+      "n_detected": 174,
+      "n_true": 180,
+      "count_error": -6,
+      "count_error_pct": -3.3333333333333335,
+      "median_offset": 0.0982689778712726,
+      "seed": 20232001,
+      "threshold_used": 0.4071739814420882
+    },
+    {
+      "tp": 170,
+      "fp": 1,
+      "fn": 10,
+      "precision": 0.9941520467836257,
+      "recall": 0.9444444444444444,
+      "f1": 0.9686609686609685,
+      "n_detected": 171,
+      "n_true": 180,
+      "count_error": -9,
+      "count_error_pct": -5.0,
+      "median_offset": 0.10785643517317575,
+      "seed": 20232014,
+      "threshold_used": 0.4075631333645909
+    },
+    {
+      "tp": 172,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.9555555555555556,
+      "f1": 0.9772727272727273,
+      "n_detected": 172,
+      "n_true": 180,
+      "count_error": -8,
+      "count_error_pct": -4.444444444444445,
+      "median_offset": 0.09842372669146679,
+      "seed": 20232027,
+      "threshold_used": 0.40286336028236863
+    },
+    {
+      "tp": 174,
+      "fp": 2,
+      "fn": 6,
+      "precision": 0.9886363636363636,
+      "recall": 0.9666666666666667,
+      "f1": 0.9775280898876404,
+      "n_detected": 176,
+      "n_true": 180,
+      "count_error": -4,
+      "count_error_pct": -2.2222222222222223,
+      "median_offset": 0.09350930876573994,
+      "seed": 20232040,
+      "threshold_used": 0.4050818275872821
+    },
+    {
+      "tp": 175,
+      "fp": 1,
+      "fn": 5,
+      "precision": 0.9943181818181818,
+      "recall": 0.9722222222222222,
+      "f1": 0.9831460674157303,
+      "n_detected": 176,
+      "n_true": 180,
+      "count_error": -4,
+      "count_error_pct": -2.2222222222222223,
+      "median_offset": 0.1073437681531015,
+      "seed": 20232053,
+      "threshold_used": 0.40583687916231725
+    },
+    {
+      "tp": 169,
+      "fp": 0,
+      "fn": 11,
+      "precision": 1.0,
+      "recall": 0.9388888888888889,
+      "f1": 0.9684813753581661,
+      "n_detected": 169,
+      "n_true": 180,
+      "count_error": -11,
+      "count_error_pct": -6.111111111111111,
+      "median_offset": 0.11378046605907866,
+      "seed": 20232066,
+      "threshold_used": 0.40378893000203014
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "raw": [
+    {
+      "tile": "tile1",
+      "normalised": false,
+      "haematoxylin": 0.37705867135663024,
+      "eosin": 0.13786695879039,
+      "he_ratio": 2.7349458830806754,
+      "tissue_fraction": 0.7392750115260489,
+      "n_nuclei_adaptive": 216,
+      "n_nuclei_fixed": 158,
+      "nuclei_per_megapixel": 1244.8132780082988,
+      "median_radius_px": 5.499039842323396,
+      "threshold_adaptive": 0.37087202371604355
+    },
+    {
+      "tile": "tile2",
+      "normalised": false,
+      "haematoxylin": 0.35040411760648427,
+      "eosin": 0.013894809700561775,
+      "he_ratio": 25.218345926127885,
+      "tissue_fraction": 0.5167704011065007,
+      "n_nuclei_adaptive": 9,
+      "n_nuclei_fixed": 14,
+      "nuclei_per_megapixel": 51.86721991701245,
+      "median_radius_px": 4.787307364817192,
+      "threshold_adaptive": 0.42384334304465743
+    },
+    {
+      "tile": "tile3",
+      "normalised": false,
+      "haematoxylin": 0.29253492823973265,
+      "eosin": 0.2564853997056561,
+      "he_ratio": 1.1405519712835397,
+      "tissue_fraction": 0.35559589672660213,
+      "n_nuclei_adaptive": 177,
+      "n_nuclei_fixed": 3,
+      "nuclei_per_megapixel": 1020.0553250345781,
+      "median_radius_px": 5.499039842323396,
+      "threshold_adaptive": 0.19944826738319055
+    },
+    {
+      "tile": "tile4",
+      "normalised": false,
+      "haematoxylin": 0.36142106273464086,
+      "eosin": 0.08613011704528305,
+      "he_ratio": 4.196221660126424,
+      "tissue_fraction": 0.31693176579068694,
+      "n_nuclei_adaptive": 37,
+      "n_nuclei_fixed": 21,
+      "nuclei_per_megapixel": 213.2319041032734,
+      "median_radius_px": 6.4820448144285745,
+      "threshold_adaptive": 0.3484628035061633
+    },
+    {
+      "tile": "tile5",
+      "normalised": false,
+      "haematoxylin": 0.38979329620381603,
+      "eosin": 0.04457957252685184,
+      "he_ratio": 8.74376478080919,
+      "tissue_fraction": 0.4851141078838174,
+      "n_nuclei_adaptive": 89,
+      "n_nuclei_fixed": 88,
+      "nuclei_per_megapixel": 512.9091747349008,
+      "median_radius_px": 6.128667601500942,
+      "threshold_adaptive": 0.3978837549934056
+    }
+  ],
+  "normalised": [
+    {
+      "tile": "tile1",
+      "normalised": true,
+      "haematoxylin": 0.19042659313944604,
+      "eosin": 0.3379212973098216,
+      "he_ratio": 0.5635235028257313,
+      "tissue_fraction": 0.6702397418165053,
+      "n_nuclei_adaptive": 208,
+      "n_nuclei_fixed": 0,
+      "nuclei_per_megapixel": 1198.70908252651,
+      "median_radius_px": 5.4115163798060095,
+      "threshold_adaptive": 0.1966595652608341
+    },
+    {
+      "tile": "tile2",
+      "normalised": true,
+      "haematoxylin": 0.16700132249054292,
+      "eosin": 0.3031253754261678,
+      "he_ratio": 0.5509315155676217,
+      "tissue_fraction": 0.2927270631627478,
+      "n_nuclei_adaptive": 87,
+      "n_nuclei_fixed": 0,
+      "nuclei_per_megapixel": 501.3831258644537,
+      "median_radius_px": 5.499039842323396,
+      "threshold_adaptive": 0.17580862584759205
+    },
+    {
+      "tile": "tile3",
+      "normalised": true,
+      "haematoxylin": 0.12600404579333932,
+      "eosin": 0.38139904984004835,
+      "he_ratio": 0.33037325563916076,
+      "tissue_fraction": 0.5975334255417243,
+      "n_nuclei_adaptive": 183,
+      "n_nuclei_fixed": 0,
+      "nuclei_per_megapixel": 1054.6334716459198,
+      "median_radius_px": 5.382025607773058,
+      "threshold_adaptive": 0.1344522825474167
+    },
+    {
+      "tile": "tile4",
+      "normalised": true,
+      "haematoxylin": 0.3198205241049194,
+      "eosin": 0.0671200444204242,
+      "he_ratio": 4.764903343949517,
+      "tissue_fraction": 0.9080624711848778,
+      "n_nuclei_adaptive": 32,
+      "n_nuclei_fixed": 0,
+      "nuclei_per_megapixel": 184.41678192715537,
+      "median_radius_px": 7.537607592672853,
+      "threshold_adaptive": 0.2906032416268909
+    },
+    {
+      "tile": "tile5",
+      "normalised": true,
+      "haematoxylin": 0.25873027712221325,
+      "eosin": 0.20718090721105403,
+      "he_ratio": 1.248813322641966,
+      "tissue_fraction": 0.31908137390502533,
+      "n_nuclei_adaptive": 44,
+      "n_nuclei_fixed": 0,
+      "nuclei_per_megapixel": 253.57307514983864,
+      "median_radius_px": 5.124294598878109,
+      "threshold_adaptive": 0.20681202644897353
+    }
+  ],
+  "work_scale": 2,
+  "normalisation_target": {
+    "haematoxylin": 0.4797724958350895,
+    "eosin": 0.7715025826185749
+  },
+  "spread_raw": {
+    "haematoxylin_cv_pct": 10.61747158495679,
+    "eosin_cv_pct": 88.37209581479698,
+    "he_ratio_cv_pct": 116.76664551815547,
+    "n_nuclei_fixed_cv_pct": 115.52435377107014,
+    "n_nuclei_adaptive_cv_pct": 84.16744230883909,
+    "eosin_fold_range": 18.45907970191821
+  },
+  "spread_normalised": {
+    "haematoxylin_cv_pct": 36.235966865774415,
+    "eosin_cv_pct": 48.259067681309425,
+    "he_ratio_cv_pct": 124.82289085609455,
+    "n_nuclei_fixed_cv_pct": NaN,
+    "n_nuclei_adaptive_cv_pct": 72.6223109803835,
+    "eosin_fold_range": 5.682342035578139
+  }
+}

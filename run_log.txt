@@ -1,0 +1,23 @@
+
+--- s03_staining ------------------------------------------------
+s03: staining swept 0.4x to 2.0x on 6 fields
+     adaptive    worst count error    4.0%   worst F1 0.974
+     fixed       worst count error   95.8%   worst F1 0.080
+     normalised  worst count error   34.0%   worst F1 0.766
+
+--- s04_real ----------------------------------------------------
+s04: five published H&E tiles
+     tile1: H 0.377  E 0.138  H/E   2.7  nuclei  216 (adaptive)  158 (fixed)
+     tile2: H 0.350  E 0.014  H/E  25.2  nuclei    9 (adaptive)   14 (fixed)
+     tile3: H 0.293  E 0.256  H/E   1.1  nuclei  177 (adaptive)    3 (fixed)
+     tile4: H 0.361  E 0.086  H/E   4.2  nuclei   37 (adaptive)   21 (fixed)
+     tile5: H 0.390  E 0.045  H/E   8.7  nuclei   89 (adaptive)   88 (fixed)
+     spread across tiles, eosin: 18x (CV 88%) -> after normalisation CV 48%
+     nuclei count with the fixed threshold: CV 116% -> no nuclei found at all after normalisation
+
+--- s05_report --------------------------------------------------
+s05: wrote docs/results.json, docs/results.js and tiles.png, deconvolution.png, synthetic.png, sweep.png, normalisation.png
+
+done in 147s
+
+[exited with code 0]

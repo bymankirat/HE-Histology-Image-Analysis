@@ -1,0 +1,3 @@
+  ok   test_synthetic.test_the_image_is_an_eight_bit_rgb_picture
+
+27 passed, 0 failed in 15.9s

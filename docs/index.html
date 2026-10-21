@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H&amp;E image analysis</title>
+<meta name="description" content="Phase 2 of a histology workshop project: separating the two dyes of an H&amp;E section by colour deconvolution, counting nuclei against a known ground truth, and measuring how much the staining itself changes the answer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="report.css?v=1">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Digital pathology · Python · scikit-image · colour deconvolution</p>
+    <h1>What an H&amp;E section tells you, and how much of it depends on the staining</h1>
+    <p class="lede">In 2023 I cut and stained rat tissue by hand at a histology workshop, and the protocol we settled on fixed the
+      haematoxylin at 35 seconds and the eosin at a single dip. This is the computational phase of that work: the two dyes are separated
+      from the colour image, nuclei are counted against a ground truth that is known exactly, and the staining is then varied on purpose to
+      see how much the measurement moves. The answer is that it moves a great deal if you use a fixed cut-off, and almost not at all if the
+      method re-derives its threshold from each image.</p>
+    <p class="byline">Mankirat Singh · <span id="generated"></span></p>
+    <nav class="toc" aria-label="Sections">
+      <a href="phase1.html">← Phase 1 (the workshop poster)</a>
+      <a href="#glance">At a glance</a><a href="#deconv">Separating the dyes</a><a href="#truth">Ground truth</a>
+      <a href="#sweep">Staining strength</a><a href="#real">Five real sections</a><a href="#checks">Checks</a><a href="#limits">Limits</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="glance">
+  <h2>At a glance</h2>
+  <p class="note">Every number on this page is read from <code>results.js</code>, written by the pipeline run that also made the figures.</p>
+  <div class="kpis" id="kpis"></div>
+  <div class="takeaways" id="takeaways"></div>
+</section>
+
+<section id="deconv">
+  <h2>Separating the two dyes</h2>
+  <p class="note">A stained section absorbs light, so the quantity that adds up is optical density, not brightness. Writing
+    <code>OD = -log10(I / I₀)</code> makes the two dyes additive, and each one has its own colour direction, so recovering how much of each
+    dye sits in a pixel is a least-squares problem (Ruifrok &amp; Johnston, 2001). It is implemented here from the equations rather than
+    called from a library, which is why it can be checked against one.</p>
+  <figure class="fig">
+    <img src="figures/deconvolution.png" alt="A section split into haematoxylin only, eosin only, and the two put back together">
+    <figcaption>The same field as published, as haematoxylin alone, as eosin alone, and recombined from the two concentration maps.</figcaption>
+  </figure>
+  <div class="tablewrap"><table class="tbl" id="deconv-tbl"></table></div>
+</section>
+
+<section id="truth">
+  <h2>Counting nuclei against a known answer</h2>
+  <p class="note">A real section does not come with a list of where its nuclei are, so accuracy cannot be measured on one. Instead the
+    image is built forwards: nuclei of known position and size are placed, the two stains are applied through the same absorption law the
+    analysis assumes, and the result is degraded with uneven illumination, read noise and 8-bit quantisation. The detector is plain on
+    purpose — smooth, threshold, split touching objects by watershed — because every step is then scored rather than trusted. Parameters
+    were chosen on three development fields and the numbers below come from
+    <span id="n-test"></span> different ones.</p>
+  <figure class="fig">
+    <img src="figures/synthetic.png" alt="A synthetic field, the nuclei that were placed in it, and the ones the detector found">
+    <figcaption>Left: a synthetic field. Middle: the nuclei that were placed in it. Right: what the detector found, outlined.</figcaption>
+  </figure>
+  <div class="tablewrap"><table class="tbl" id="truth-tbl"></table></div>
+</section>
+
+<section id="sweep">
+  <h2>The same tissue, stained more or less strongly</h2>
+  <p class="note">Here the tissue is held fixed and only the amount of dye changes, from 0.4× to 2.0× the reference stain — the
+    computational version of leaving the section in the haematoxylin for a shorter or longer time. Three rules are compared: a threshold
+    recomputed for every image, one threshold fixed once at the reference staining, and that same fixed threshold applied after the image
+    has been re-stained to a common appearance.</p>
+  <figure class="fig">
+    <img src="figures/sweep.png" alt="Counting error against staining strength for three thresholding rules">
+    <figcaption>Error in the nuclei count as the staining strength changes. The adaptive rule is flat; the fixed one falls off a cliff
+      once the section is under-stained.</figcaption>
+  </figure>
+  <div class="tablewrap"><table class="tbl" id="sweep-tbl"></table></div>
+  <p class="note" id="sweep-note"></p>
+</section>
+
+<section id="real">
+  <h2>Five real sections</h2>
+  <p class="note">Five published H&amp;E tiles, stained in different laboratories. Haematoxylin is reproducible across them; eosin is not.
+    Because the five are different tissues — ducts, stroma, fat — the differences in nuclei count between them are mostly biology, so the
+    useful comparison here is the staining measurement itself, not the counts.</p>
+  <figure class="fig">
+    <img src="figures/tiles.png" alt="Five H&amp;E sections with their measured stain levels">
+    <figcaption>The five sections with the mean dye concentration measured over the tissue in each.</figcaption>
+  </figure>
+  <div class="tablewrap"><table class="tbl" id="real-tbl"></table></div>
+  <h3>Can normalisation make them comparable?</h3>
+  <p class="note" id="norm-note"></p>
+  <figure class="fig">
+    <img src="figures/normalisation.png" alt="The five sections before and after stain normalisation">
+    <figcaption>Top: as published. Bottom: each section re-expressed in the reference stain vectors and rescaled to the median strength of
+      the set.</figcaption>
+  </figure>
+</section>
+
+<section id="checks">
+  <h2>Checks built in</h2>
+  <ul class="checks" id="checks-list"></ul>
+</section>
+
+<section id="limits">
+  <h2>Limits</h2>
+  <ul class="plain">
+    <li>The ground truth is synthetic. It is built from the same absorption law the analysis assumes, so it tests the detector and the
+      arithmetic, not whether real nuclei look like the model's nuclei.</li>
+    <li>The five real tiles are crops of a published figure, so a nucleus is only a few pixels across. Counts from them are made at a fixed
+      working scale and are comparable with each other, not with a full-resolution slide.</li>
+    <li>Those five tiles are different tissues from different laboratories. Staining and biology vary together, so they cannot separate the
+      two; that is what the synthetic experiment is for.</li>
+    <li>Stain normalisation estimates the dye vectors from the image. On a section with little stainable tissue — the adipose tile here —
+      that estimate is poor, and normalising makes the measurement worse rather than better.</li>
+    <li>Counting nuclei is not diagnosis. Nothing here identifies a cell type or a disease.</li>
+  </ul>
+</section>
+
+<section id="method">
+  <h2>How to run it</h2>
+  <p class="note">The whole thing rebuilds from one command, and the tests run without any network access.</p>
+  <pre class="sql">pip install -r requirements.txt
+python run_all.py        # fetches the tiles, runs every step, writes docs/
+python tests/run_tests.py</pre>
+  <p class="small">Real images: five H&amp;E tiles from the <a href="https://github.com/Peter554/StainTools">StainTools</a> repository
+    (MIT licence). Reference stain vectors: Ruifrok &amp; Johnston (2001). Stain-vector estimation and normalisation follow Macenko et al.
+    (2009). Phase 1 was a departmental workshop at the DS Kothari Centre, Miranda House, University of Delhi;
+    <a href="phase1.html">the poster and its authors are here</a>.</p>
+</section>
+
+</main>
+<p class="foot">Mankirat Singh · <a href="https://bymankirat.github.io/myportfolio/">portfolio</a> ·
+  <a href="https://github.com/bymankirat">GitHub</a></p>
+<script src="results.js"></script>
+<script src="report.js"></script>
+</body>
+</html>

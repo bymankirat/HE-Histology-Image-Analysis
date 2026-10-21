@@ -1,0 +1,693 @@
+window.HE = {
+  "generated": "2026-10-21",
+  "seed": 20231101,
+  "figures": {
+    "tiles": "tiles.png",
+    "deconvolution": "deconvolution.png",
+    "synthetic": "synthetic.png",
+    "sweep": "sweep.png",
+    "normalisation": "normalisation.png"
+  },
+  "manifest": {
+    "source_repository": "https://github.com/Peter554/StainTools",
+    "source_file": "images/normalize_before.png",
+    "licence": "MIT (StainTools, Peter Byfield)",
+    "strip_md5": "c96103e21cbdba74d451d73b582ed644",
+    "tiles": [
+      {
+        "name": "tile1",
+        "file": "tile1.png",
+        "height": 180,
+        "width": 241,
+        "md5": "c9b45ec443064ab41cf3499d77362db2"
+      },
+      {
+        "name": "tile2",
+        "file": "tile2.png",
+        "height": 180,
+        "width": 241,
+        "md5": "7f403932467474710ed58218f539abe7"
+      },
+      {
+        "name": "tile3",
+        "file": "tile3.png",
+        "height": 180,
+        "width": 241,
+        "md5": "966a2dafa6306e9be27aa63a109b744a"
+      },
+      {
+        "name": "tile4",
+        "file": "tile4.png",
+        "height": 180,
+        "width": 241,
+        "md5": "136a89ba382d43c54d65379918f867c2"
+      },
+      {
+        "name": "tile5",
+        "file": "tile5.png",
+        "height": 180,
+        "width": 241,
+        "md5": "3de5ec8162796b35425fa39a0b5e0cfc"
+      }
+    ]
+  },
+  "validation": {
+    "deconvolution": {
+      "max_abs_error_known_mixture": 1.2212453270876722e-15,
+      "pearson_vs_skimage": {
+        "haematoxylin": 0.9999888654050184,
+        "eosin": 0.9941622794641908,
+        "dab": 0.9999980916660385
+      },
+      "stain_vector_angle_deg": {
+        "haematoxylin": 1.3598102986724891,
+        "eosin": 1.7464886552666625
+      }
+    },
+    "development_fields": {
+      "f1": {
+        "mean": 0.9792782852689536,
+        "ci_low": 0.9772727272727272,
+        "ci_high": 0.9803921568627451
+      },
+      "precision": {
+        "mean": 0.9962335216572504,
+        "ci_low": 0.9887005649717514,
+        "ci_high": 1.0
+      },
+      "recall": {
+        "mean": 0.9629629629629629,
+        "ci_low": 0.9555555555555556,
+        "ci_high": 0.9722222222222222
+      },
+      "count_error_pct": {
+        "mean": -3.3333333333333335,
+        "ci_low": -4.444444444444445,
+        "ci_high": -1.6666666666666667
+      }
+    },
+    "test_fields": {
+      "f1": {
+        "mean": 0.9744734401707685,
+        "ci_low": 0.9705514712900625,
+        "ci_high": 0.9787449203305636
+      },
+      "precision": {
+        "mean": 0.9942687232274348,
+        "ci_low": 0.9904867641936607,
+        "ci_high": 0.9980785194274872
+      },
+      "recall": {
+        "mean": 0.9555555555555556,
+        "ci_low": 0.9462962962962963,
+        "ci_high": 0.9648148148148148
+      },
+      "count_error_pct": {
+        "mean": -3.888888888888889,
+        "ci_low": -5.092592592592593,
+        "ci_high": -2.777777777777778
+      }
+    },
+    "n_development_fields": 3,
+    "n_test_fields": 6,
+    "fixed_threshold": 0.40138916475301184,
+    "blank_slide_counts": [
+      0,
+      0,
+      0
+    ],
+    "per_test_field": [
+      {
+        "tp": 172,
+        "fp": 2,
+        "fn": 8,
+        "precision": 0.9885057471264368,
+        "recall": 0.9555555555555556,
+        "f1": 0.9717514124293786,
+        "n_detected": 174,
+        "n_true": 180,
+        "count_error": -6,
+        "count_error_pct": -3.3333333333333335,
+        "median_offset": 0.0982689778712726,
+        "seed": 20232001,
+        "threshold_used": 0.4071739814420882
+      },
+      {
+        "tp": 170,
+        "fp": 1,
+        "fn": 10,
+        "precision": 0.9941520467836257,
+        "recall": 0.9444444444444444,
+        "f1": 0.9686609686609685,
+        "n_detected": 171,
+        "n_true": 180,
+        "count_error": -9,
+        "count_error_pct": -5.0,
+        "median_offset": 0.10785643517317575,
+        "seed": 20232014,
+        "threshold_used": 0.4075631333645909
+      },
+      {
+        "tp": 172,
+        "fp": 0,
+        "fn": 8,
+        "precision": 1.0,
+        "recall": 0.9555555555555556,
+        "f1": 0.9772727272727273,
+        "n_detected": 172,
+        "n_true": 180,
+        "count_error": -8,
+        "count_error_pct": -4.444444444444445,
+        "median_offset": 0.09842372669146679,
+        "seed": 20232027,
+        "threshold_used": 0.40286336028236863
+      },
+      {
+        "tp": 174,
+        "fp": 2,
+        "fn": 6,
+        "precision": 0.9886363636363636,
+        "recall": 0.9666666666666667,
+        "f1": 0.9775280898876404,
+        "n_detected": 176,
+        "n_true": 180,
+        "count_error": -4,
+        "count_error_pct": -2.2222222222222223,
+        "median_offset": 0.09350930876573994,
+        "seed": 20232040,
+        "threshold_used": 0.4050818275872821
+      },
+      {
+        "tp": 175,
+        "fp": 1,
+        "fn": 5,
+        "precision": 0.9943181818181818,
+        "recall": 0.9722222222222222,
+        "f1": 0.9831460674157303,
+        "n_detected": 176,
+        "n_true": 180,
+        "count_error": -4,
+        "count_error_pct": -2.2222222222222223,
+        "median_offset": 0.1073437681531015,
+        "seed": 20232053,
+        "threshold_used": 0.40583687916231725
+      },
+      {
+        "tp": 169,
+        "fp": 0,
+        "fn": 11,
+        "precision": 1.0,
+        "recall": 0.9388888888888889,
+        "f1": 0.9684813753581661,
+        "n_detected": 169,
+        "n_true": 180,
+        "count_error": -11,
+        "count_error_pct": -6.111111111111111,
+        "median_offset": 0.11378046605907866,
+        "seed": 20232066,
+        "threshold_used": 0.40378893000203014
+      }
+    ]
+  },
+  "staining": {
+    "fixed_threshold": 0.40138916475301184,
+    "rows": [
+      {
+        "strength": 0.4,
+        "method": "adaptive",
+        "f1": 0.9749325081372243,
+        "precision": 0.9952155685033534,
+        "recall": 0.9555555555555556,
+        "count_error_pct": -3.9814814814814823,
+        "abs_count_error_pct": 3.9814814814814823,
+        "n_detected": 172.83333333333334,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.4,
+        "method": "fixed",
+        "f1": 0.07989574867952126,
+        "precision": 1.0,
+        "recall": 0.041666666666666664,
+        "count_error_pct": -95.83333333333333,
+        "abs_count_error_pct": 95.83333333333333,
+        "n_detected": 7.5,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.4,
+        "method": "normalised",
+        "f1": 0.765793263688046,
+        "precision": 0.9637096380444614,
+        "recall": 0.6361111111111112,
+        "count_error_pct": -33.98148148148148,
+        "abs_count_error_pct": 33.98148148148148,
+        "n_detected": 118.83333333333333,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.6,
+        "method": "adaptive",
+        "f1": 0.9754234456595704,
+        "precision": 0.9952210409028938,
+        "recall": 0.9564814814814815,
+        "count_error_pct": -3.8888888888888893,
+        "abs_count_error_pct": 3.8888888888888893,
+        "n_detected": 173.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.6,
+        "method": "fixed",
+        "f1": 0.963668961748021,
+        "precision": 0.9961126310989513,
+        "recall": 0.9333333333333335,
+        "count_error_pct": -6.296296296296297,
+        "abs_count_error_pct": 6.296296296296297,
+        "n_detected": 168.66666666666666,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.6,
+        "method": "normalised",
+        "f1": 0.8904269805191555,
+        "precision": 0.9886923789232401,
+        "recall": 0.8101851851851851,
+        "count_error_pct": -18.055555555555554,
+        "abs_count_error_pct": 18.055555555555554,
+        "n_detected": 147.5,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.8,
+        "method": "adaptive",
+        "f1": 0.9740122585634552,
+        "precision": 0.993288331070572,
+        "recall": 0.9555555555555556,
+        "count_error_pct": -3.7962962962962963,
+        "abs_count_error_pct": 3.7962962962962963,
+        "n_detected": 173.16666666666666,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.8,
+        "method": "fixed",
+        "f1": 0.9744361918918649,
+        "precision": 0.9951769281083847,
+        "recall": 0.9546296296296296,
+        "count_error_pct": -4.0740740740740735,
+        "abs_count_error_pct": 4.0740740740740735,
+        "n_detected": 172.66666666666666,
+        "n_true": 180.0
+      },
+      {
+        "strength": 0.8,
+        "method": "normalised",
+        "f1": 0.9749347072987024,
+        "precision": 0.9952433820968304,
+        "recall": 0.9555555555555556,
+        "count_error_pct": -3.9814814814814814,
+        "abs_count_error_pct": 3.9814814814814814,
+        "n_detected": 172.83333333333334,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.0,
+        "method": "adaptive",
+        "f1": 0.9744734401707685,
+        "precision": 0.9942687232274348,
+        "recall": 0.9555555555555556,
+        "count_error_pct": -3.888888888888889,
+        "abs_count_error_pct": 3.888888888888889,
+        "n_detected": 173.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.0,
+        "method": "fixed",
+        "f1": 0.9744734401707685,
+        "precision": 0.9942687232274348,
+        "recall": 0.9555555555555556,
+        "count_error_pct": -3.888888888888889,
+        "abs_count_error_pct": 3.888888888888889,
+        "n_detected": 173.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.0,
+        "method": "normalised",
+        "f1": 0.9744574485408614,
+        "precision": 0.9952325595860079,
+        "recall": 0.9546296296296296,
+        "count_error_pct": -4.0740740740740735,
+        "abs_count_error_pct": 4.0740740740740735,
+        "n_detected": 172.66666666666666,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.3,
+        "method": "adaptive",
+        "f1": 0.9744734401707685,
+        "precision": 0.9942687232274348,
+        "recall": 0.9555555555555556,
+        "count_error_pct": -3.888888888888889,
+        "abs_count_error_pct": 3.888888888888889,
+        "n_detected": 173.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.3,
+        "method": "fixed",
+        "f1": 0.972504054701524,
+        "precision": 0.9951990738491929,
+        "recall": 0.950925925925926,
+        "count_error_pct": -4.444444444444445,
+        "abs_count_error_pct": 4.444444444444445,
+        "n_detected": 172.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.3,
+        "method": "normalised",
+        "f1": 0.9743826113813946,
+        "precision": 0.998073217726397,
+        "recall": 0.9518518518518518,
+        "count_error_pct": -4.62962962962963,
+        "abs_count_error_pct": 4.62962962962963,
+        "n_detected": 171.66666666666666,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.6,
+        "method": "adaptive",
+        "f1": 0.9744734401707685,
+        "precision": 0.9942687232274348,
+        "recall": 0.9555555555555556,
+        "count_error_pct": -3.888888888888889,
+        "abs_count_error_pct": 3.888888888888889,
+        "n_detected": 173.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.6,
+        "method": "fixed",
+        "f1": 0.9734427001475104,
+        "precision": 0.9961794670846396,
+        "recall": 0.9518518518518518,
+        "count_error_pct": -4.444444444444444,
+        "abs_count_error_pct": 4.444444444444444,
+        "n_detected": 172.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 1.6,
+        "method": "normalised",
+        "f1": 0.9744040118265239,
+        "precision": 0.9971153633202666,
+        "recall": 0.9527777777777778,
+        "count_error_pct": -4.444444444444445,
+        "abs_count_error_pct": 4.444444444444445,
+        "n_detected": 172.0,
+        "n_true": 180.0
+      },
+      {
+        "strength": 2.0,
+        "method": "adaptive",
+        "f1": 0.9749646395158361,
+        "precision": 0.9942687232274348,
+        "recall": 0.9564814814814815,
+        "count_error_pct": -3.7962962962962963,
+        "abs_count_error_pct": 3.7962962962962963,
+        "n_detected": 173.16666666666666,
+        "n_true": 180.0
+      },
+      {
+        "strength": 2.0,
+        "method": "fixed",
+        "f1": 0.9768135242088846,
+        "precision": 0.9980787544570683,
+        "recall": 0.9564814814814815,
+        "count_error_pct": -4.166666666666667,
+        "abs_count_error_pct": 4.166666666666667,
+        "n_detected": 172.5,
+        "n_true": 180.0
+      },
+      {
+        "strength": 2.0,
+        "method": "normalised",
+        "f1": 0.9739424409028544,
+        "precision": 0.9961683936232969,
+        "recall": 0.9527777777777778,
+        "count_error_pct": -4.351851851851852,
+        "abs_count_error_pct": 4.351851851851852,
+        "n_detected": 172.16666666666666,
+        "n_true": 180.0
+      }
+    ],
+    "normalisation_target": {
+      "haematoxylin": 1.0301802958343063,
+      "eosin": 0.4317816654254685
+    },
+    "measured_strength": [
+      {
+        "strength": 0.4,
+        "haematoxylin": 0.07283488278240086,
+        "eosin": 0.11555253275843819
+      },
+      {
+        "strength": 0.6,
+        "haematoxylin": 0.10540706525267528,
+        "eosin": 0.17493236943720092
+      },
+      {
+        "strength": 0.8,
+        "haematoxylin": 0.13801706649489345,
+        "eosin": 0.2339025910695239
+      },
+      {
+        "strength": 1.0,
+        "haematoxylin": 0.1706716677960106,
+        "eosin": 0.29273062043580994
+      },
+      {
+        "strength": 1.3,
+        "haematoxylin": 0.21977098682164495,
+        "eosin": 0.3811073388638499
+      },
+      {
+        "strength": 1.6,
+        "haematoxylin": 0.26908145434272757,
+        "eosin": 0.47009227705848033
+      },
+      {
+        "strength": 2.0,
+        "haematoxylin": 0.3352687604156927,
+        "eosin": 0.5921769021706768
+      }
+    ],
+    "summary": {
+      "adaptive": {
+        "worst_abs_count_error_pct": 3.9814814814814823,
+        "mean_abs_count_error_pct": 3.8756613756613763,
+        "worst_f1": 0.9740122585634552,
+        "mean_f1": 0.974679024626913
+      },
+      "fixed": {
+        "worst_abs_count_error_pct": 95.83333333333333,
+        "mean_abs_count_error_pct": 17.59259259259259,
+        "worst_f1": 0.07989574867952126,
+        "mean_f1": 0.8450335173640136
+      },
+      "normalised": {
+        "worst_abs_count_error_pct": 33.98148148148148,
+        "mean_abs_count_error_pct": 10.502645502645503,
+        "worst_f1": 0.765793263688046,
+        "mean_f1": 0.9326202091653626
+      }
+    }
+  },
+  "real": {
+    "raw": [
+      {
+        "tile": "tile1",
+        "normalised": false,
+        "haematoxylin": 0.37705867135663024,
+        "eosin": 0.13786695879039,
+        "he_ratio": 2.7349458830806754,
+        "tissue_fraction": 0.7392750115260489,
+        "n_nuclei_adaptive": 216,
+        "n_nuclei_fixed": 158,
+        "nuclei_per_megapixel": 1244.8132780082988,
+        "median_radius_px": 5.499039842323396,
+        "threshold_adaptive": 0.37087202371604355
+      },
+      {
+        "tile": "tile2",
+        "normalised": false,
+        "haematoxylin": 0.35040411760648427,
+        "eosin": 0.013894809700561775,
+        "he_ratio": 25.218345926127885,
+        "tissue_fraction": 0.5167704011065007,
+        "n_nuclei_adaptive": 9,
+        "n_nuclei_fixed": 14,
+        "nuclei_per_megapixel": 51.86721991701245,
+        "median_radius_px": 4.787307364817192,
+        "threshold_adaptive": 0.42384334304465743
+      },
+      {
+        "tile": "tile3",
+        "normalised": false,
+        "haematoxylin": 0.29253492823973265,
+        "eosin": 0.2564853997056561,
+        "he_ratio": 1.1405519712835397,
+        "tissue_fraction": 0.35559589672660213,
+        "n_nuclei_adaptive": 177,
+        "n_nuclei_fixed": 3,
+        "nuclei_per_megapixel": 1020.0553250345781,
+        "median_radius_px": 5.499039842323396,
+        "threshold_adaptive": 0.19944826738319055
+      },
+      {
+        "tile": "tile4",
+        "normalised": false,
+        "haematoxylin": 0.36142106273464086,
+        "eosin": 0.08613011704528305,
+        "he_ratio": 4.196221660126424,
+        "tissue_fraction": 0.31693176579068694,
+        "n_nuclei_adaptive": 37,
+        "n_nuclei_fixed": 21,
+        "nuclei_per_megapixel": 213.2319041032734,
+        "median_radius_px": 6.4820448144285745,
+        "threshold_adaptive": 0.3484628035061633
+      },
+      {
+        "tile": "tile5",
+        "normalised": false,
+        "haematoxylin": 0.38979329620381603,
+        "eosin": 0.04457957252685184,
+        "he_ratio": 8.74376478080919,
+        "tissue_fraction": 0.4851141078838174,
+        "n_nuclei_adaptive": 89,
+        "n_nuclei_fixed": 88,
+        "nuclei_per_megapixel": 512.9091747349008,
+        "median_radius_px": 6.128667601500942,
+        "threshold_adaptive": 0.3978837549934056
+      }
+    ],
+    "normalised": [
+      {
+        "tile": "tile1",
+        "normalised": true,
+        "haematoxylin": 0.19042659313944604,
+        "eosin": 0.3379212973098216,
+        "he_ratio": 0.5635235028257313,
+        "tissue_fraction": 0.6702397418165053,
+        "n_nuclei_adaptive": 208,
+        "n_nuclei_fixed": 0,
+        "nuclei_per_megapixel": 1198.70908252651,
+        "median_radius_px": 5.4115163798060095,
+        "threshold_adaptive": 0.1966595652608341
+      },
+      {
+        "tile": "tile2",
+        "normalised": true,
+        "haematoxylin": 0.16700132249054292,
+        "eosin": 0.3031253754261678,
+        "he_ratio": 0.5509315155676217,
+        "tissue_fraction": 0.2927270631627478,
+        "n_nuclei_adaptive": 87,
+        "n_nuclei_fixed": 0,
+        "nuclei_per_megapixel": 501.3831258644537,
+        "median_radius_px": 5.499039842323396,
+        "threshold_adaptive": 0.17580862584759205
+      },
+      {
+        "tile": "tile3",
+        "normalised": true,
+        "haematoxylin": 0.12600404579333932,
+        "eosin": 0.38139904984004835,
+        "he_ratio": 0.33037325563916076,
+        "tissue_fraction": 0.5975334255417243,
+        "n_nuclei_adaptive": 183,
+        "n_nuclei_fixed": 0,
+        "nuclei_per_megapixel": 1054.6334716459198,
+        "median_radius_px": 5.382025607773058,
+        "threshold_adaptive": 0.1344522825474167
+      },
+      {
+        "tile": "tile4",
+        "normalised": true,
+        "haematoxylin": 0.3198205241049194,
+        "eosin": 0.0671200444204242,
+        "he_ratio": 4.764903343949517,
+        "tissue_fraction": 0.9080624711848778,
+        "n_nuclei_adaptive": 32,
+        "n_nuclei_fixed": 0,
+        "nuclei_per_megapixel": 184.41678192715537,
+        "median_radius_px": 7.537607592672853,
+        "threshold_adaptive": 0.2906032416268909
+      },
+      {
+        "tile": "tile5",
+        "normalised": true,
+        "haematoxylin": 0.25873027712221325,
+        "eosin": 0.20718090721105403,
+        "he_ratio": 1.248813322641966,
+        "tissue_fraction": 0.31908137390502533,
+        "n_nuclei_adaptive": 44,
+        "n_nuclei_fixed": 0,
+        "nuclei_per_megapixel": 253.57307514983864,
+        "median_radius_px": 5.124294598878109,
+        "threshold_adaptive": 0.20681202644897353
+      }
+    ],
+    "work_scale": 2,
+    "normalisation_target": {
+      "haematoxylin": 0.4797724958350895,
+      "eosin": 0.7715025826185749
+    },
+    "spread_raw": {
+      "haematoxylin_cv_pct": 10.61747158495679,
+      "eosin_cv_pct": 88.37209581479698,
+      "he_ratio_cv_pct": 116.76664551815547,
+      "n_nuclei_fixed_cv_pct": 115.52435377107014,
+      "n_nuclei_adaptive_cv_pct": 84.16744230883909,
+      "eosin_fold_range": 18.45907970191821
+    },
+    "spread_normalised": {
+      "haematoxylin_cv_pct": 36.235966865774415,
+      "eosin_cv_pct": 48.259067681309425,
+      "he_ratio_cv_pct": 124.82289085609455,
+      "n_nuclei_fixed_cv_pct": NaN,
+      "n_nuclei_adaptive_cv_pct": 72.6223109803835,
+      "eosin_fold_range": 5.682342035578139
+    }
+  },
+  "headline": {
+    "deconvolution_error": 1.2212453270876722e-15,
+    "skimage_r_haematoxylin": 0.9999888654050184,
+    "skimage_r_eosin": 0.9941622794641908,
+    "stain_angle_h": 1.3598102986724891,
+    "stain_angle_e": 1.7464886552666625,
+    "f1": 0.9744734401707685,
+    "f1_lo": 0.9705514712900625,
+    "f1_hi": 0.9787449203305636,
+    "precision": 0.9942687232274348,
+    "recall": 0.9555555555555556,
+    "blank_counts": [
+      0,
+      0,
+      0
+    ],
+    "adaptive_worst": 3.9814814814814823,
+    "fixed_worst": 95.83333333333333,
+    "fixed_worst_strength": 0.4,
+    "fixed_worst_f1": 0.07989574867952126,
+    "adaptive_at_worst": 3.9814814814814823,
+    "eosin_fold": 18.45907970191821,
+    "eosin_cv": 88.37209581479698,
+    "haem_cv": 10.61747158495679,
+    "eosin_cv_norm": 48.259067681309425,
+    "eosin_fold_norm": 5.682342035578139
+  }
+};

@@ -1,0 +1,43 @@
+{
+  "source_repository": "https://github.com/Peter554/StainTools",
+  "source_file": "images/normalize_before.png",
+  "licence": "MIT (StainTools, Peter Byfield)",
+  "strip_md5": "c96103e21cbdba74d451d73b582ed644",
+  "tiles": [
+    {
+      "name": "tile1",
+      "file": "tile1.png",
+      "height": 180,
+      "width": 241,
+      "md5": "c9b45ec443064ab41cf3499d77362db2"
+    },
+    {
+      "name": "tile2",
+      "file": "tile2.png",
+      "height": 180,
+      "width": 241,
+      "md5": "7f403932467474710ed58218f539abe7"
+    },
+    {
+      "name": "tile3",
+      "file": "tile3.png",
+      "height": 180,
+      "width": 241,
+      "md5": "966a2dafa6306e9be27aa63a109b744a"
+    },
+    {
+      "name": "tile4",
+      "file": "tile4.png",
+      "height": 180,
+      "width": 241,
+      "md5": "136a89ba382d43c54d65379918f867c2"
+    },
+    {
+      "name": "tile5",
+      "file": "tile5.png",
+      "height": 180,
+      "width": 241,
+      "md5": "3de5ec8162796b35425fa39a0b5e0cfc"
+    }
+  ]
+}

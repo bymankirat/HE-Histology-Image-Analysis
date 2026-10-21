@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 1 — Microtomy and staining</title>
+<meta name="description" content="The 2023 DS Kothari Centre workshop poster: microtomy and haematoxylin and eosin staining of rat tissue, and the protocol behind it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="report.css?v=1">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Phase 1 · 2023 · DS Kothari Centre, Miranda House, University of Delhi</p>
+    <h1>Microtomy and staining: a histological study of tissues</h1>
+    <p class="lede">A hands-on workshop in the Department of Zoology: embedding rat tissue in wax, cutting 7–8 µm sections on a manual
+      rotary microtome, staining them with haematoxylin and eosin, and reading the result under a light microscope. The work was presented
+      as a group poster. I took part as one of fifteen student authors, and the protocol below is the one on that poster.</p>
+    <p class="byline">Phase 2, the computational follow-up, is <a href="index.html">here</a>.</p>
+    <nav class="toc" aria-label="Sections">
+      <a href="index.html">Phase 2 (image analysis) →</a><a href="#poster">The poster</a><a href="#protocol">Protocol</a>
+      <a href="#result">What we saw</a><a href="#why">Why it matters for phase 2</a><a href="#credits">Authors</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="poster">
+  <h2>The poster</h2>
+  <img class="poster" src="poster.jpg" alt="Workshop poster: Microtomy and Staining, a Histological Study of Tissues, Department of Zoology, Miranda House, University of Delhi">
+  <p class="small">Presented at the DS Kothari Centre for Research and Innovation in Science Education, Miranda House, University of Delhi,
+    2023. Reproduced here with the names of everyone who worked on it.</p>
+</section>
+
+<section id="protocol">
+  <h2>The protocol, step by step</h2>
+  <p class="note">Written out as a procedure, with the numbers that were actually used. Each step exists to stop a specific thing going
+    wrong, which is the second column.</p>
+  <div class="tablewrap">
+    <table class="tbl">
+      <thead><tr><th>Step</th><th>What was done</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Tissue extraction</td><td>Tissue placed in 0.9% saline</td><td>Isotonic with body fluid, so cells neither swell nor shrink</td></tr>
+        <tr><td>Fixation</td><td>Bouin's fixative (25 ml formalin, 70 ml picric acid, 5 ml glacial acetic acid)</td><td>Cross-links protein and stops autolysis, which would otherwise destroy the architecture being studied</td></tr>
+        <tr><td>Washing</td><td>Overnight running wash, then distilled water</td><td>Removes fixative; leftover picric acid interferes with staining</td></tr>
+        <tr><td>Dehydration</td><td>Ascending alcohol, 1 h each: 30% → 50% → 70% → 90% → 100% (1½ h), then xylene until clear</td><td>Wax will not enter wet tissue; the gradient avoids the shrinkage a sudden change causes</td></tr>
+        <tr><td>Wax infiltration</td><td>Xylene–paraffin 1:1, then three changes of seasoned paraffin, 1 h each</td><td>Replaces the clearing agent with wax throughout, so the block cuts evenly</td></tr>
+        <tr><td>Embedding</td><td>Fresh cavity block, glycerine-coated, left to solidify; trimmed and mounted on wood</td><td>Gives a block that can be clamped and oriented</td></tr>
+        <tr><td>Sectioning</td><td>Manual rotary microtome, 7–8 µm; ribbons floated at 57–58 °C and picked up on albumin-coated slides</td><td>Thin enough for light to pass through a single cell layer; the warm bath flattens the compression from cutting</td></tr>
+        <tr><td>Staining</td><td>Xylene ×2 (15 min each) → descending alcohol 100 → 90 → 70 → 50 → 30% (5 min each) → haematoxylin 35 s → alcohol → eosin 2–3 dips → DPX and coverslip</td><td>Dewax, rehydrate, stain nuclei blue and cytoplasm pink, then dehydrate and seal. <b>The times are the part that was standardised.</b></td></tr>
+        <tr><td>Microscopy</td><td>DPX dried fully, then examined at 10× and 40×</td><td>A wet mount drifts and the coverslip moves under the objective</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="result">
+  <h2>What we saw</h2>
+  <ul class="plain">
+    <li>Permanent H&amp;E slides of rat tissue; the poster shows a transverse section of duodenum.</li>
+    <li>All four wall layers were resolved: serosa, muscularis, submucosa and mucosa, with villi and crypts, and Brunner's glands in the
+      submucosa.</li>
+    <li>Nuclei blue from the haematoxylin, cytoplasm pink from the eosin — the contrast the whole method exists to produce.</li>
+    <li>Staining was standardised at 35 seconds of haematoxylin and one dip of eosin, after comparing shorter and longer times by eye.</li>
+  </ul>
+</section>
+
+<section id="why">
+  <h2>Why this led to phase 2</h2>
+  <p class="note">The one decision we made by eye was how long to stain. That is fine when a person is going to look at the slide, because
+    the eye adapts to the overall colour. It is not obviously fine when software is going to measure the slide instead, and that is a
+    question the workshop could not answer with the slides in front of us: we had no way of knowing the true number of nuclei in a field,
+    so we could not tell whether a measurement had changed because the tissue differed or because the staining did.</p>
+  <p class="note">Phase 2 answers it by building fields whose nuclei are known exactly, staining them computationally at strengths from
+    0.4× to 2.0×, and measuring what happens. <a href="index.html">The result is here</a>: the staining matters enormously to a fixed
+    cut-off and hardly at all to a method that re-derives its threshold per image — so the protocol was right to pin the times down, and
+    software reading such slides should not assume they were.</p>
+</section>
+
+<section id="credits">
+  <h2>Authors</h2>
+  <p class="credits"><b>Co-ordinators:</b> Dr Nisha Vashishta, Dr Reetuparna Basak, Dr Rohit Jamwal.</p>
+  <p class="credits"><b>Student authors:</b> Jasjot Kaur, Naina Kataria, Ishna Chopra, Daidipya Singh, Monu Kumar, Mankirat Singh,
+    Deep Ranjan, Yashshree, Shubhda Sharma, Muskaan, Ananya Arya, Aastha Gupta, Mansi, Mohd Imran.</p>
+  <p class="small">Department of Zoology, Miranda House, University of Delhi, with the DS Kothari Centre for Research and Innovation in
+    Science Education. The phase 2 analysis on this site is my own work and uses public images only; it does not reuse any data from the
+    workshop.</p>
+</section>
+
+</main>
+<p class="foot">Mankirat Singh · <a href="https://bymankirat.github.io/myportfolio/">portfolio</a> ·
+  <a href="https://github.com/bymankirat">GitHub</a></p>
+</body>
+</html>
