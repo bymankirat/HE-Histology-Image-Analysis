@@ -1,10 +1,10 @@
 {
   "deconvolution": {
-    "max_abs_error_known_mixture": 1.2212453270876722e-15,
+    "max_abs_error_known_mixture": 1.4432899320127035e-15,
     "pearson_vs_skimage": {
-      "haematoxylin": 0.9999888654050184,
-      "eosin": 0.9941622794641908,
-      "dab": 0.9999980916660385
+      "haematoxylin": 0.9999888654050227,
+      "eosin": 0.9941622794642168,
+      "dab": 0.9999980916660387
     },
     "stain_vector_angle_deg": {
       "haematoxylin": 1.3598102986724891,
@@ -57,7 +57,7 @@
   },
   "n_development_fields": 3,
   "n_test_fields": 6,
-  "fixed_threshold": 0.40138916475301184,
+  "fixed_threshold": 0.4013891647530119,
   "blank_slide_counts": [
     0,
     0,
@@ -122,7 +122,7 @@
       "count_error_pct": -2.2222222222222223,
       "median_offset": 0.09350930876573994,
       "seed": 20232040,
-      "threshold_used": 0.4050818275872821
+      "threshold_used": 0.40508182758728195
     },
     {
       "tp": 175,
@@ -137,7 +137,7 @@
       "count_error_pct": -2.2222222222222223,
       "median_offset": 0.1073437681531015,
       "seed": 20232053,
-      "threshold_used": 0.40583687916231725
+      "threshold_used": 0.4058368791623175
     },
     {
       "tp": 169,

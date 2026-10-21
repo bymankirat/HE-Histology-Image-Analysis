@@ -1,5 +1,5 @@
 {
-  "fixed_threshold": 0.40138916475301184,
+  "fixed_threshold": 0.4013891647530119,
   "rows": [
     {
       "strength": 0.4,
@@ -234,19 +234,19 @@
     }
   ],
   "normalisation_target": {
-    "haematoxylin": 1.0301802958343063,
-    "eosin": 0.4317816654254685
+    "haematoxylin": 1.0301802958343045,
+    "eosin": 0.43178166542546864
   },
   "measured_strength": [
     {
       "strength": 0.4,
-      "haematoxylin": 0.07283488278240086,
+      "haematoxylin": 0.07283488278240084,
       "eosin": 0.11555253275843819
     },
     {
       "strength": 0.6,
-      "haematoxylin": 0.10540706525267528,
-      "eosin": 0.17493236943720092
+      "haematoxylin": 0.10540706525267525,
+      "eosin": 0.17493236943720095
     },
     {
       "strength": 0.8,
@@ -271,7 +271,7 @@
     {
       "strength": 2.0,
       "haematoxylin": 0.3352687604156927,
-      "eosin": 0.5921769021706768
+      "eosin": 0.5921769021706769
     }
   ],
   "summary": {

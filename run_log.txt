@@ -1,3 +1,22 @@
+/home/runner/work/HE-Histology-Image-Analysis/HE-Histology-Image-Analysis/pipeline/nuclei.py:46: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = morphology.remove_small_objects(mask, min_size=p["min_area"])
+/home/runner/work/HE-Histology-Image-Analysis/HE-Histology-Image-Analysis/pipeline/nuclei.py:46: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = morphology.remove_small_objects(mask, min_size=p["min_area"])
+
+--- s01_images --------------------------------------------------
+s01: 5 tiles, strip md5 c96103e21cbd
+     tile1: 241x180 px, md5 c9b45ec44306
+     tile2: 241x180 px, md5 7f4039324674
+     tile3: 241x180 px, md5 966a2dafa630
+     tile4: 241x180 px, md5 136a89ba382d
+     tile5: 241x180 px, md5 3de5ec816279
+
+--- s02_validate ------------------------------------------------
+s02: deconvolution exact to 1.44e-15 on known mixtures
+     scikit-image agreement r = haematoxylin 1.0000, eosin 0.9942, dab 1.0000
+     stain vectors recovered to haematoxylin 1.36 deg, eosin 1.75 deg
+     held-out fields: F1 0.974 (0.971-0.979), precision 0.994, recall 0.956
+     blank slides: [0, 0, 0] nuclei (negative control)
 
 --- s03_staining ------------------------------------------------
 s03: staining swept 0.4x to 2.0x on 6 fields
@@ -18,6 +37,4 @@ s04: five published H&E tiles
 --- s05_report --------------------------------------------------
 s05: wrote docs/results.json, docs/results.js and tiles.png, deconvolution.png, synthetic.png, sweep.png, normalisation.png
 
-done in 147s
-
-[exited with code 0]
+done in 85s

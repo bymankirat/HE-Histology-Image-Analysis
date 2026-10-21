@@ -53,11 +53,11 @@ window.HE = {
   },
   "validation": {
     "deconvolution": {
-      "max_abs_error_known_mixture": 1.2212453270876722e-15,
+      "max_abs_error_known_mixture": 1.4432899320127035e-15,
       "pearson_vs_skimage": {
-        "haematoxylin": 0.9999888654050184,
-        "eosin": 0.9941622794641908,
-        "dab": 0.9999980916660385
+        "haematoxylin": 0.9999888654050227,
+        "eosin": 0.9941622794642168,
+        "dab": 0.9999980916660387
       },
       "stain_vector_angle_deg": {
         "haematoxylin": 1.3598102986724891,
@@ -110,7 +110,7 @@ window.HE = {
     },
     "n_development_fields": 3,
     "n_test_fields": 6,
-    "fixed_threshold": 0.40138916475301184,
+    "fixed_threshold": 0.4013891647530119,
     "blank_slide_counts": [
       0,
       0,
@@ -175,7 +175,7 @@ window.HE = {
         "count_error_pct": -2.2222222222222223,
         "median_offset": 0.09350930876573994,
         "seed": 20232040,
-        "threshold_used": 0.4050818275872821
+        "threshold_used": 0.40508182758728195
       },
       {
         "tp": 175,
@@ -190,7 +190,7 @@ window.HE = {
         "count_error_pct": -2.2222222222222223,
         "median_offset": 0.1073437681531015,
         "seed": 20232053,
-        "threshold_used": 0.40583687916231725
+        "threshold_used": 0.4058368791623175
       },
       {
         "tp": 169,
@@ -210,7 +210,7 @@ window.HE = {
     ]
   },
   "staining": {
-    "fixed_threshold": 0.40138916475301184,
+    "fixed_threshold": 0.4013891647530119,
     "rows": [
       {
         "strength": 0.4,
@@ -445,19 +445,19 @@ window.HE = {
       }
     ],
     "normalisation_target": {
-      "haematoxylin": 1.0301802958343063,
-      "eosin": 0.4317816654254685
+      "haematoxylin": 1.0301802958343045,
+      "eosin": 0.43178166542546864
     },
     "measured_strength": [
       {
         "strength": 0.4,
-        "haematoxylin": 0.07283488278240086,
+        "haematoxylin": 0.07283488278240084,
         "eosin": 0.11555253275843819
       },
       {
         "strength": 0.6,
-        "haematoxylin": 0.10540706525267528,
-        "eosin": 0.17493236943720092
+        "haematoxylin": 0.10540706525267525,
+        "eosin": 0.17493236943720095
       },
       {
         "strength": 0.8,
@@ -482,7 +482,7 @@ window.HE = {
       {
         "strength": 2.0,
         "haematoxylin": 0.3352687604156927,
-        "eosin": 0.5921769021706768
+        "eosin": 0.5921769021706769
       }
     ],
     "summary": {
@@ -537,9 +537,9 @@ window.HE = {
       {
         "tile": "tile3",
         "normalised": false,
-        "haematoxylin": 0.29253492823973265,
+        "haematoxylin": 0.2925349282397326,
         "eosin": 0.2564853997056561,
-        "he_ratio": 1.1405519712835397,
+        "he_ratio": 1.1405519712835395,
         "tissue_fraction": 0.35559589672660213,
         "n_nuclei_adaptive": 177,
         "n_nuclei_fixed": 3,
@@ -558,42 +558,42 @@ window.HE = {
         "n_nuclei_fixed": 21,
         "nuclei_per_megapixel": 213.2319041032734,
         "median_radius_px": 6.4820448144285745,
-        "threshold_adaptive": 0.3484628035061633
+        "threshold_adaptive": 0.34846280350616343
       },
       {
         "tile": "tile5",
         "normalised": false,
         "haematoxylin": 0.38979329620381603,
-        "eosin": 0.04457957252685184,
-        "he_ratio": 8.74376478080919,
+        "eosin": 0.044579572526851845,
+        "he_ratio": 8.743764780809189,
         "tissue_fraction": 0.4851141078838174,
         "n_nuclei_adaptive": 89,
         "n_nuclei_fixed": 88,
         "nuclei_per_megapixel": 512.9091747349008,
         "median_radius_px": 6.128667601500942,
-        "threshold_adaptive": 0.3978837549934056
+        "threshold_adaptive": 0.3978837549934055
       }
     ],
     "normalised": [
       {
         "tile": "tile1",
         "normalised": true,
-        "haematoxylin": 0.19042659313944604,
+        "haematoxylin": 0.19042659313944602,
         "eosin": 0.3379212973098216,
-        "he_ratio": 0.5635235028257313,
+        "he_ratio": 0.5635235028257312,
         "tissue_fraction": 0.6702397418165053,
         "n_nuclei_adaptive": 208,
         "n_nuclei_fixed": 0,
         "nuclei_per_megapixel": 1198.70908252651,
         "median_radius_px": 5.4115163798060095,
-        "threshold_adaptive": 0.1966595652608341
+        "threshold_adaptive": 0.19665956526083406
       },
       {
         "tile": "tile2",
         "normalised": true,
-        "haematoxylin": 0.16700132249054292,
-        "eosin": 0.3031253754261678,
-        "he_ratio": 0.5509315155676217,
+        "haematoxylin": 0.16700132249054297,
+        "eosin": 0.30312537542616785,
+        "he_ratio": 0.5509315155676218,
         "tissue_fraction": 0.2927270631627478,
         "n_nuclei_adaptive": 87,
         "n_nuclei_fixed": 0,
@@ -612,14 +612,14 @@ window.HE = {
         "n_nuclei_fixed": 0,
         "nuclei_per_megapixel": 1054.6334716459198,
         "median_radius_px": 5.382025607773058,
-        "threshold_adaptive": 0.1344522825474167
+        "threshold_adaptive": 0.13445228254741665
       },
       {
         "tile": "tile4",
         "normalised": true,
         "haematoxylin": 0.3198205241049194,
-        "eosin": 0.0671200444204242,
-        "he_ratio": 4.764903343949517,
+        "eosin": 0.06712004442042421,
+        "he_ratio": 4.764903343949516,
         "tissue_fraction": 0.9080624711848778,
         "n_nuclei_adaptive": 32,
         "n_nuclei_fixed": 0,
@@ -638,16 +638,16 @@ window.HE = {
         "n_nuclei_fixed": 0,
         "nuclei_per_megapixel": 253.57307514983864,
         "median_radius_px": 5.124294598878109,
-        "threshold_adaptive": 0.20681202644897353
+        "threshold_adaptive": 0.2068120264489736
       }
     ],
     "work_scale": 2,
     "normalisation_target": {
-      "haematoxylin": 0.4797724958350895,
-      "eosin": 0.7715025826185749
+      "haematoxylin": 0.4797724958350891,
+      "eosin": 0.7715025826185744
     },
     "spread_raw": {
-      "haematoxylin_cv_pct": 10.61747158495679,
+      "haematoxylin_cv_pct": 10.617471584956798,
       "eosin_cv_pct": 88.37209581479698,
       "he_ratio_cv_pct": 116.76664551815547,
       "n_nuclei_fixed_cv_pct": 115.52435377107014,
@@ -655,18 +655,18 @@ window.HE = {
       "eosin_fold_range": 18.45907970191821
     },
     "spread_normalised": {
-      "haematoxylin_cv_pct": 36.235966865774415,
-      "eosin_cv_pct": 48.259067681309425,
+      "haematoxylin_cv_pct": 36.23596686577441,
+      "eosin_cv_pct": 48.25906768130942,
       "he_ratio_cv_pct": 124.82289085609455,
       "n_nuclei_fixed_cv_pct": NaN,
       "n_nuclei_adaptive_cv_pct": 72.6223109803835,
-      "eosin_fold_range": 5.682342035578139
+      "eosin_fold_range": 5.682342035578138
     }
   },
   "headline": {
-    "deconvolution_error": 1.2212453270876722e-15,
-    "skimage_r_haematoxylin": 0.9999888654050184,
-    "skimage_r_eosin": 0.9941622794641908,
+    "deconvolution_error": 1.4432899320127035e-15,
+    "skimage_r_haematoxylin": 0.9999888654050227,
+    "skimage_r_eosin": 0.9941622794642168,
     "stain_angle_h": 1.3598102986724891,
     "stain_angle_e": 1.7464886552666625,
     "f1": 0.9744734401707685,
@@ -686,8 +686,8 @@ window.HE = {
     "adaptive_at_worst": 3.9814814814814823,
     "eosin_fold": 18.45907970191821,
     "eosin_cv": 88.37209581479698,
-    "haem_cv": 10.61747158495679,
-    "eosin_cv_norm": 48.259067681309425,
-    "eosin_fold_norm": 5.682342035578139
+    "haem_cv": 10.617471584956798,
+    "eosin_cv_norm": 48.25906768130942,
+    "eosin_fold_norm": 5.682342035578138
   }
 };
